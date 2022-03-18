@@ -16,14 +16,15 @@ private:
 	Apple m_apple;
 	Score m_score;
 public:
+	/* Constructors */
 	Application();
 	Application(const Application&) = delete;
 private:
-	void update();
-	void render();
-	void reset();
-	bool isAppleOnSnake() const;
-	void appleHandler();
+	void update();					// computes all the game's stuff in the game loop
+	void render();					// renders object on the screen
+	void reset();					// reset the game when the player loses
+	bool isAppleOnSnake() const;	// check if the apple's position is on the snake
+	void appleHandler();			// change the apple's position while it's on the snake 
 public:
-	void start();
+	void start();					// start the game by creating the main window loop, updating, rendering and reseting if it's necessary
 };

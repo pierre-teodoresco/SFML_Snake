@@ -35,8 +35,8 @@ void Apple::generate()
 	* Assign the values to x and y coordinates 
 	*/
 
-	float x = box_divider(rng) * BOX_SIZE + width_divider(rng) * 100;		// float to avoid implicit conversion
-	float y = box_divider(rng) * BOX_SIZE + height_divider(rng) * 100;		// same thing
+	float x = float(box_divider(rng) * BOX_SIZE + width_divider(rng) * 100);		// float to avoid implicit conversion
+	float y = float(box_divider(rng) * BOX_SIZE + height_divider(rng) * 100);		// same thing
 
 	m_shape.setPosition(x, y);
 }
