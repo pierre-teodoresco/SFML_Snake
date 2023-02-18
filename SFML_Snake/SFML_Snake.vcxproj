@@ -158,7 +158,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\$(ProjectName)\SFML\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>user32.lib;gdi32.lib;shell32.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>user32.lib;gdi32.lib;shell32.lib;sfml-system.lib;sfml-window.lib;sfml-graphics.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <PerUserRedirection>true</PerUserRedirection>
     </Link>
   </ItemDefinitionGroup>
@@ -270,6 +270,7 @@
     <ClInclude Include="SFML\include\SFML\Window\WindowStyle.hpp" />
     <ClInclude Include="src\headers\Apple.h" />
     <ClInclude Include="src\headers\Application.h" />
+    <ClInclude Include="src\headers\CurrentTime.h" />
     <ClInclude Include="src\headers\Score.h" />
     <ClInclude Include="src\headers\Snake.h" />
     <ClInclude Include="src\headers\Utils.h" />
