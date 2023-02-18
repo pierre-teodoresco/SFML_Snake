@@ -151,7 +151,7 @@ bool Snake::isDead() const
 }
 
 /*
-* @brief if the head of the snake touch an apple, the snake eat the apple and c
+* @brief if the head of the snake touch an apple, the snake eat the apple and grow
 * @param the apple which is currently displaying on the screen
 * @return void
 */
