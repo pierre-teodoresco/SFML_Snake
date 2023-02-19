@@ -270,7 +270,6 @@
     <ClInclude Include="SFML\include\SFML\Window\WindowStyle.hpp" />
     <ClInclude Include="src\headers\Apple.h" />
     <ClInclude Include="src\headers\Application.h" />
-    <ClInclude Include="src\headers\CurrentTime.h" />
     <ClInclude Include="src\headers\Score.h" />
     <ClInclude Include="src\headers\Snake.h" />
     <ClInclude Include="src\headers\Utils.h" />

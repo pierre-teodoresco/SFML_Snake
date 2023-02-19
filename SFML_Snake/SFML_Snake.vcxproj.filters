@@ -341,9 +341,6 @@
     <ClInclude Include="SFML\include\SFML\Window.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\headers\CurrentTime.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="SFML\include\SFML\Audio\SoundFileFactory.inl">

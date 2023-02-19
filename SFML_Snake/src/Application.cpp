@@ -91,7 +91,7 @@ void Application::appleHandler()
 void Application::start()
 {
 	sf::Clock clock;
-	const float updateInterval = 1.0f / 60.0f;
+	const float updateInterval = 1.0f / 30.0f;
 	float accumulatedTime = 0.0f;
 
 	bool shouldUpdateSnake = true; // flag to determine whether to update snake position
