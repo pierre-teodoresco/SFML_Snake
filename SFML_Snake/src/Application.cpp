@@ -10,7 +10,7 @@ Application::Application() :
 	m_apple(),
 	m_score()
 {
-	m_window.setFramerateLimit(12);
+	m_window.setFramerateLimit(60);
 	m_window.setVerticalSyncEnabled(true);
 	this->appleHandler();
 }
@@ -80,7 +80,8 @@ bool Application::isAppleOnSnake() const
 */
 void Application::appleHandler()
 {
-	while (isAppleOnSnake()) m_apple = Apple();
+	while (this->isAppleOnSnake()) 
+		m_apple = Apple();
 }
 
 /*
@@ -89,10 +90,30 @@ void Application::appleHandler()
 */
 void Application::start()
 {
+	sf::Clock clock;
+	const float updateInterval = 1.0f / 30.0f;
+	float accumulatedTime = 0.0f;
+
+	bool shouldUpdateSnake = true; // flag to determine whether to update snake position
+
 	while (m_window.isOpen())
 	{
-		if (m_snake.isDead()) this->reset();
-		this->update();
-		this->render();
+		float deltaTime = clock.restart().asSeconds();
+		accumulatedTime += deltaTime;
+
+		while (accumulatedTime >= updateInterval)
+		{
+			if (shouldUpdateSnake)
+			{
+				if (m_snake.isDead()) 
+					this->reset();
+				this->update(); // update snake position
+			}
+
+			shouldUpdateSnake = !shouldUpdateSnake; // flip the update flag every other frame
+			accumulatedTime -= updateInterval;
+		}
+
+		this->render(); // render the game
 	}
 }
